@@ -1,5 +1,5 @@
 function Home() {
-    return <h1>Faça o melhor que você puder, até não ter condições melhores, de fazer melhor ainda!</h1>
+    return <h1>Se vc esta grávida, da uma risadinha!</h1>
 }
 
 export default Home;

@@ -1,5 +1,5 @@
-function status(request, response) {
+function index(request, response) {
   response.status(200).json({ chave: "Estamos progredindo \u{1F600}" });
 }
 
-export default status;
+export default index;

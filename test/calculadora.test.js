@@ -7,3 +7,7 @@ test("Test sum 1 + 3", () => {
 test("Test sum 5 + 100", () => {
   expect(calculadora.somar(5, 100)).toBe(105);
 });
+
+test("Test sum 'banana' + 100", () => {
+  expect(calculadora.somar("banana", 100)).toBe("Erro");
+});

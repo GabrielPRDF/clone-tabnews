@@ -14,9 +14,7 @@ test("GET to /api/v1/status should return 200", async () => {
   expect(responseBody.updated_at).toEqual(parseUpdatedAt);
 
   // @ts-ignore
-  expect(responseBody.version_db).toBe(
-    "PostgreSQL 16.9 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit",
-  );
+  expect(responseBody.version_db).toBe("16.9");
 
   // @ts-ignore
   expect(Number(responseBody.max_connection)).toBe(100);

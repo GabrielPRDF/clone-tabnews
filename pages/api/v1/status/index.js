@@ -1,9 +1,19 @@
 import database from "infra/database";
 
 async function status(request, response) {
-  const result = await database.query("SELECT 1 + 1 as sum;");
-  console.log(result);
-  response.status(200).json({ chave: "Estamos progredindo \u{1F600}" });
+  const updatedAt = new Date().toISOString();
+  const versionDB = await database.query("SELECT version()");
+  const maxConnection = await database.query("SHOW max_connections");
+  const activityConnections = await database.query(
+    "SELECT COUNT(state) FROM pg_stat_activity WHERE state = 'active'",
+  );
+  console.log(activityConnections);
+  response.status(200).json({
+    updated_at: updatedAt,
+    version_db: versionDB.rows[0].version,
+    max_connection: maxConnection.rows[0].max_connections,
+    activity_connection: activityConnections.rows[0].count,
+  });
 }
 
 export default status;

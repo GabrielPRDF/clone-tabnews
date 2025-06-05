@@ -14,7 +14,7 @@ test("GET to /api/v1/status should return 200", async () => {
   // @ts-ignore
   expect(responseBody.version_db).toBe("16.9");
   // @ts-ignore
-  expect(responseBody.max_connection).toBe(100);
+  expect(responseBody.max_connection).toEqual(100);
   // @ts-ignore
   expect(responseBody.activity_connection).toBe(1);
 });

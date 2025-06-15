@@ -18,6 +18,7 @@ function Home() {
           justify-content: center;
           height: 90vh;
           margin: 0;
+          background-image: url("assets/404.gif");
         }
 
         .loading-container {

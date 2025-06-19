@@ -1,4 +1,5 @@
 import database from "infra/database";
+import bg from "../../assets/images/security-team.jpg";
 
 async function status(request, response) {
   const updatedAt = new Date().toISOString();

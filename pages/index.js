@@ -1,52 +1,45 @@
+import imagem404 from "../assets/404.gif";
+import load from "../assets/load.gif";
+
 function Home() {
   return (
-    <div>
-      <div className="container">
-        <div className="container">
-          <div className="flex">
-            <div>Página em construção</div>
-            <div className="loading-container">
-              <div className="loading"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <style jsx>{`
-        .container {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 90vh;
-          margin: 0;
-          background-image: url("assets/404.gif");
-        }
-
-        .loading-container {
-          position: relative;
-          width: 50px;
-          height: 50px;
-          margin: auto;
-        }
-
-        .loading {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          border: 4px solid #3498db;
-          border-radius: 50%;
-          border-top-color: transparent;
-          animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
-        }
-      `}</style>
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignContent: "center",
+      }}
+    >
+      <img src={imagem404.src} alt="Pagina 404" />
+      {/*<div*/}
+      {/*  style={{*/}
+      {/*    marginTop: "-150px",*/}
+      {/*    display: "flex",*/}
+      {/*  }}*/}
+      {/*>*/}
+      <p
+        style={{
+          fontSize: "20px",
+          margin: 0,
+          marginTop: "-150px",
+          fontWeight: "bold",
+        }}
+      >
+        Pagina em construção{" "}
+      </p>
+      {/*<img*/}
+      {/*  style={{*/}
+      {/*    height: "30px",*/}
+      {/*    margin: 0,*/}
+      {/*    display: "flex",*/}
+      {/*    alignContent: "center",*/}
+      {/*  }}*/}
+      {/*  src={load.src}*/}
+      {/*  alt="load"*/}
+      {/*/>*/}
+      {/*</div>*/}
     </div>
   );
 }

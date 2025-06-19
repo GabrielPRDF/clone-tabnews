@@ -29,17 +29,6 @@ function Home() {
       >
         Pagina em construção{" "}
       </p>
-      {/*<img*/}
-      {/*  style={{*/}
-      {/*    height: "30px",*/}
-      {/*    margin: 0,*/}
-      {/*    display: "flex",*/}
-      {/*    alignContent: "center",*/}
-      {/*  }}*/}
-      {/*  src={load.src}*/}
-      {/*  alt="load"*/}
-      {/*/>*/}
-      {/*</div>*/}
     </div>
   );
 }

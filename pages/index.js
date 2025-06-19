@@ -10,6 +10,7 @@ function Home() {
         flexDirection: "column",
         justifyContent: "center",
         alignContent: "center",
+        textAlign: "center",
       }}
     >
       <img src={imagem404.src} alt="Pagina 404" />
@@ -17,7 +18,6 @@ function Home() {
         style={{
           fontSize: "20px",
           margin: 0,
-          marginTop: "-150px",
           fontWeight: "bold",
         }}
       >

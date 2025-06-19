@@ -13,12 +13,6 @@ function Home() {
       }}
     >
       <img src={imagem404.src} alt="Pagina 404" />
-      {/*<div*/}
-      {/*  style={{*/}
-      {/*    marginTop: "-150px",*/}
-      {/*    display: "flex",*/}
-      {/*  }}*/}
-      {/*>*/}
       <p
         style={{
           fontSize: "20px",

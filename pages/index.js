@@ -19,6 +19,7 @@ function Home() {
           fontSize: "20px",
           margin: 0,
           fontWeight: "bold",
+          color: "gray",
         }}
       >
         Pagina em construção{" "}

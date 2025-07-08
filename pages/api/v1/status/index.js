@@ -7,14 +7,14 @@ async function status(request, response) {
   const activityConnections = await database.query(
     "SELECT COUNT(state) FROM pg_stat_activity WHERE state = 'active'",
   );
-  const databaseOpenedConnectionsResult = await database.query(
-    "SELECT count(*)::int FROM pg_stat_activity WHERE datname = 'local_db'",
-  );
+  // const databaseOpenedConnectionsResult = await database.query(
+  //   "SELECT count(*)::int FROM pg_stat_activity WHERE datname = 'local_db'",
+  // );
 
-  console.log(databaseOpenedConnectionsResult.rows[0].count);
-  const activityConnections = await database.query(
-    "SELECT COUNT(state) FROM pg_stat_database WHERE state = 'active'",
-  );
+  // console.log(databaseOpenedConnectionsResult.rows[0].count);
+  // const activityConnections = await database.query(
+  //   "SELECT COUNT(state) FROM pg_stat_database WHERE state = 'active'",
+  // );
   response.status(200).json({
     updated_at: updatedAt,
     version_db: versionDB.rows[0].server_version,

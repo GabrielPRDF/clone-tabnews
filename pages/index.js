@@ -5,12 +5,10 @@ function Home() {
   return (
     <div
       style={{
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
+        display: "grid",
         justifyContent: "center",
-        alignContent: "center",
         textAlign: "center",
+        paddingTop: "100px",   
       }}
     >
       <img src={imagem404.src} alt="Pagina 404" />
@@ -20,6 +18,7 @@ function Home() {
           margin: 0,
           fontWeight: "bold",
           color: "gray",
+          fontFamily: "Baskerville",
         }}
       >
         Pagina em construção{" "}

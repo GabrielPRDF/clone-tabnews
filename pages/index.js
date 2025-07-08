@@ -11,7 +11,6 @@ function Home() {
         paddingTop: "100px",   
       }}
     >
-      <img src={imagem404.src} alt="Pagina 404" />
       <p
         style={{
           fontSize: "20px",
@@ -23,6 +22,7 @@ function Home() {
       >
         Pagina em construção{" "}
       </p>
+      <img src={imagem404.src} alt="Pagina 404" />
     </div>
   );
 }

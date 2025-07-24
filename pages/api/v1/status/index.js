@@ -7,7 +7,7 @@ async function status(request, response) {
   const activityConnections = await database.query(
     "SELECT COUNT(state) FROM pg_stat_activity WHERE state = 'active'",
   );
-  // const databaseOpenedConnectionsResult = await database.query(
+  // const activityConnections = await database.query(
   //   "SELECT count(*)::int FROM pg_stat_activity WHERE datname = 'local_db'",
   // );
 

@@ -4,12 +4,12 @@ async function status(request, response) {
   const updatedAt = new Date().toISOString();
   const versionDB = await database.query("SHOW server_version");
   const maxConnection = await database.query("SHOW max_connections");
-  const activityConnections = await database.query(
-    "SELECT COUNT(state) FROM pg_stat_activity WHERE state = 'active'",
-  );
   // const activityConnections = await database.query(
-  //   "SELECT count(*)::int FROM pg_stat_activity WHERE datname = 'local_db'",
+  //   "SELECT COUNT(state) FROM pg_stat_activity WHERE state = 'active'",
   // );
+  const activityConnections = await database.query(
+    "SELECT count(*)::int FROM pg_stat_activity WHERE datname = 'local_db'",
+  );
 
   // console.log(databaseOpenedConnectionsResult.rows[0].count);
   // const activityConnections = await database.query(
